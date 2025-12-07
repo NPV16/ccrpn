@@ -14,7 +14,6 @@ RUN set -x && \
     unzip Xray-linux-64.zip && \
     rm -f Xray-linux-64.zip && \
     mv xray xy && \
-    # 下载 supercronic (重新添加)
     wget -O supercronic https://github.com/aptible/supercronic/releases/latest/download/supercronic-linux-amd64 && \
     chmod +x supercronic && \
     # 清理 apt 缓存
