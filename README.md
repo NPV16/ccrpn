@@ -34,24 +34,31 @@
 
 -----
 
+## ⚠️ 注意事项
+
+  * **资源限制:** ClawCloud Run 的免费层级有资源使用限制。请合理使用，避免因超限而被暂停。
+  * **安全:** 请务必使用复杂且不易猜测的 **Path** 和 **UUID**，以增强您的代理节点的安全性。
+
+-----
+
 ## 🛠️ 本地开发与测试
 
 如果您需要本地测试，请确保您已安装 Docker 环境：
 
 ```bash
 # 克隆项目
-git clone https://github.com/justlagom/hfne.git
-cd hfne
+git clone https://github.com/justlagom/ccrpn.git
+cd ccrpn
 
 # (可选) 在本地创建一个 .env 文件来设置您的 ENC_CONFIG
 
 # 构建 Docker 镜像
-docker build -t hfne:latest .
+docker build -t ccrpn:latest .
 
 # 运行容器 (替换为您的配置)
 docker run -d -p 8080:8080 \
   -e ENC_CONFIG='{"uuid": "your-uuid", "path": "/testpath", "port": 8080}' \
-  hfne:latest
+  ccrpn:latest
 ```
 
 ## 📄 License
